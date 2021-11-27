@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 departures = {"msk": "Москвы", "spb": "Петербурга", "nsk": "Новосибирска", "ekb": "Екатеринбурга",
               "kazan": "Казани"}
 tours = {
@@ -231,7 +230,6 @@ tours = {
 
 
 @app.route("/index")
-@app.route("/")
 def index():
     return render_template("index.html",
                            tours=tours,
