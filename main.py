@@ -256,5 +256,4 @@ def tour(tour_title):
                                tour_title=tour_title)
 
 
-if __name__ == "__main__":
-    app.run()
+app.run()
