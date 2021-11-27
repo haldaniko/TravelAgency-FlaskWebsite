@@ -3,12 +3,12 @@
 {% block container %}
   <main class="container">
     <section class="mt-3 pb-5">
-      <h1 class="display-3 mt-4">{{ title }} {{ stars }}</h1>
+      <h1 class="display-3 mt-4">{{ tours[tour_title]["title"] }} {{ tours[tour_title]["stars"] }}</h1>
       <!-- HERO -->
-      <p class="lead">Из {{ departure }}:  {{ country}} ({{ nights }} ночей)</p>
-      <img src="{{ picture }}" class="w-75" alt="">
-      <p class="my-4 w-75">{{ description }}</p>
-      <a href="#" class="btn btn-success btn-lg">Купить тур за {{ price }}</a>
+      <p class="lead">Из {{ departures[tours[tour_title]["departure"]] }}:  {{ tours[tour_title]["country"] }} ({{ tours[tour_title]["nights"] }} ночей)</p>
+      <img src="{{ tours[tour_title]['picture'] }}" class="w-75" alt="">
+      <p class="my-4 w-75">{{ tours[tour_title]["description"] }}</p>
+      <a href="#" class="btn btn-success btn-lg">Купить тур за {{ tours[tour_title]["price"] }}</a>
     </section>
   </main>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -233,7 +233,9 @@ tours = {
 @app.route("/index")
 @app.route("/")
 def index():
-    return render_template("index.html", tours=tours)
+    return render_template("index.html",
+                           tours=tours,
+                           departures=departures)
 
 
 @app.route("/departure/<city>/")
@@ -249,14 +251,9 @@ def departure(city):
 def tour(tour_title):
     if tour_title in tours.keys():
         return render_template("tour.html",
-                               title=tours[tour_title]["title"],
-                               stars=tours[tour_title]["stars"] * "★",
-                               departure=departures[tours[tour_title]["departure"]],
-                               country=tours[tour_title]["country"],
-                               nights=tours[tour_title]["nights"],
-                               description=tours[tour_title]["description"],
-                               price=tours[tour_title]["price"],
-                               picture=tours[tour_title]["picture"])
+                               departures=departures,
+                               tours=tours,
+                               tour_title=tour_title)
 
 
 if __name__ == "__main__":
