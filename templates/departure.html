@@ -3,7 +3,7 @@
 
 {% block container %}
 <main class="container mt-3">
-    <h1 class="display-5 mt-4">Летим из {{ departures[city] }} </h1>
+    <h1 class="display-5 mt-4">Wir fliegen von {{ departures[city] }} </h1>
     <!-- CARDS -->
     <div class="row mt-5">
       {% for URL, tour in tours.items() %}
@@ -14,7 +14,7 @@
           <div class="card-body">
             <h2 class="h5 card-title">{{ tour['title'] }} {{ tour['stars'] * "★" }}</h2>
             <p class="card-text">{{ tour['description']|truncate(100) }}</p>
-            <a href="/tours/{{ URL }}/" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="/tours/{{ URL }}/" class="btn btn-sm btn-primary">Mehr Details</a>
           </div>
         </div>
       </div>

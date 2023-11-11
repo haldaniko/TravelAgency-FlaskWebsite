@@ -26,8 +26,11 @@ def create_dict_from_table():
 
 
 tours = create_dict_from_table()
-departures = {"msk": "Москвы", "spb": "Петербурга", "nsk": "Новосибирска", "ekb": "Екатеринбурга",
-              "kazan": "Казани"}
+departures = {"berlin": "Berlin",
+              "munich": "München",
+              "hamburg": "Hamburg",
+              "dusseldorf": "Düsseldorf",
+              "frankfurt": "Frankfurt"}
 
 
 @app.route("/index")
@@ -56,5 +59,4 @@ def tour(tour_title):
                                tour_title=tour_title)
 
 
-if __name__ == '__main__':
-    app.run()
+app.run()
